@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "UserType";
+    Layout = "~/Views/Shared/_RegistrationLayoutPage.cshtml";
+}
+
+<div class="main">
+
+    <section class="signup">
+        <!-- <img src="images/signup-bg.jpg" alt=""> -->
+        <div class="container">
+            <div class="signup-content">
+                <h2 class="form-title">User Type</h2>
+                <form action=@Html.ActionLink("ManagerLogin", "ManagerLogin", "Managers")>
+                    <div class="form-group">
+                        <input type="submit" name="submit" id="submit" class="form-submit" value="Manager" />
+                    </div>
+                </form>
+                <form action=@Html.ActionLink("ChefLogin", "ChefLogin", "Managers")>
+                    <div class="form-group">
+                        <input type="submit" name="submit" id="submit" class="form-submit" value="Chef" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</div>
+

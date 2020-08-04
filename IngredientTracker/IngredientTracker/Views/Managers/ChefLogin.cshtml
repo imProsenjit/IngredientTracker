@@ -1,0 +1,36 @@
+﻿@model IngredientTracker.Models.Chef
+@{
+    ViewBag.Title = "ChefLogin";
+    Layout = "~/Views/Shared/_RegistrationLayoutPage.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+
+    <div class="main">
+
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" class="signup-form"action=@Html.ActionLink("Dashboard", "Dashboard", "Managers")>
+                        <h2 class="form-title">Login</h2>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="ChefUserName" id="name" placeholder="Your Username" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="ChefPassword" id="password" placeholder="Password" />
+                            <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" value="Login" class="form-submit" />
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+}
+

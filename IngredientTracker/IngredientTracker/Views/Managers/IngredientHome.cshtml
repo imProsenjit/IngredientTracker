@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "IngredientHome";
+    Layout = "~/Views/Shared/_ManagerLayoutPage.cshtml";
+}
+
+<div class="content">
+    <br>
+    <br>
+    <br>
+    <br>
+    <form action=@Html.ActionLink("AddIngredient","AddIngredient", "Managers")>
+        <div class="form-group">
+            <input type="submit" value="Add Ingredient" />
+        </div>
+    </form>
+
+    <form action=@Html.ActionLink("UpdateIngredient", "UpdateIngredient", "Managers")>
+        <div class="form-group">
+            <input type="submit" value="Update Ingredient" />
+        </div>
+    </form>
+
+    <form action=@Html.ActionLink("ListIngredient", "ListIngredient", "Managers")>
+        <div class="form-group">
+            <input type="submit" value="Ingredient List" />
+        </div>
+    </form>
+
+</div>
+

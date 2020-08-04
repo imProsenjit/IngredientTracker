@@ -1,0 +1,41 @@
+﻿@model IngredientTracker.Models.ManagerRegistration
+@{
+    ViewBag.Title = "ManagerLogin";
+    Layout = "~/Views/Shared/_RegistrationLayoutPage.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+
+    <div class="main">
+
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" class="signup-form" action=@Html.ActionLink("IngredientHome", "IngredientHome", "Managers")>
+                        <h2 class="form-title">Login</h2>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="UserName" id="name" placeholder="Your Username" />
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="Password" id="password" placeholder="Password" />
+                            <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                        </div>
+
+                        <div class="form-group">
+                            @*<input type="submit" name="submit" id="submit" class="form-submit" value="Login" />*@
+                            <input type="submit" value="Login" class="form-submit" />
+                        </div>
+                    </form>
+                    <p class="loginhere">
+                        Don't have an account? <a href="registration.html" class="loginhere-link">@Html.ActionLink("Create Account Here", "ManagerRegistration", "Managers")</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+}
+

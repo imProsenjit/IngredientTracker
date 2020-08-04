@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title-IngredientTracker</title>
+    <meta charset="utf-8">
+    
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+</head>
+<body>
+
+    <input type="checkbox" id="check">
+
+    <header>
+        <label for="check">
+            <i class="fas fa-bars" id="sidebar_btn"></i>
+        </label>
+        <div class="left_area">
+            <h3>Ingredient <span>Tracker</span></h3>
+        </div>
+        <div class="right_area">
+            <a href="#" class="logout_btn">Logout</a>
+        </div>
+    </header>
+
+    <div class="sidebar">
+        <center>
+            <img src=" " class="profile_image" alt="">
+            <h4>Prosenjit Pal</h4>
+        </center>
+        <a href="Dashboard.html"><i class="fas fa-desktop"></i><span>@Html.ActionLink("Dashboard", "Dashboard", "Managers")</span></a>
+        <a href="Ingredient.html"><i class="fas fa-cogs"></i><span>@Html.ActionLink("Ingredient", "IngredientHome", "Managers")</span></a>
+        <a href="Recipe.html"><i class="fas fa-table"></i><span>@Html.ActionLink("Recipe", "RecipeHome", "Managers")</span></a>
+        <a href="Chef.html"><i class="fas fa-info-circle"></i><span>@Html.ActionLink("Add Chef", "ChefRegistration", "Managers")</span></a>
+   
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
